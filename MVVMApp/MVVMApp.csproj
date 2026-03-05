@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D58E0C3-F8CF-40FF-B2A8-6A08E13B29C1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MVVMApp</RootNamespace>
+    <AssemblyName>MVVMApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\PageModel.cs" />
+    <Compile Include="Other\Property.cs" />
+    <Compile Include="Other\RelayCommand.cs" />
+    <Compile Include="ViewModelEmp\AboutEmpVM.cs" />
+    <Compile Include="ViewModelEmp\HomeEmpVM.cs" />
+    <Compile Include="ViewModelEmp\NavigationVM.cs" />
+    <Compile Include="ViewModelEmp\SearchResumeVM.cs" />
+    <Compile Include="ViewModelEmp\SettingsEmpVM.cs" />
+    <Compile Include="ViewModelEmp\VacancyEmpVM.cs" />
+    <Compile Include="ViewModelWorker\AboutWorkerVM.cs" />
+    <Compile Include="ViewModelWorker\HomeVMWorker.cs" />
+    <Compile Include="ViewModelWorker\NavigationVMWorker.cs" />
+    <Compile Include="ViewModelWorker\ResumeVMWorker.cs" />
+    <Compile Include="ViewModelWorker\SearchVacancyVMWorker.cs" />
+    <Compile Include="ViewModelWorker\SettingsVMWorker.cs" />
+    <Compile Include="View\EmployerUI\AboutEmp.xaml.cs">
+      <DependentUpon>AboutEmp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployerUI\HomeEmp.xaml.cs">
+      <DependentUpon>HomeEmp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployerUI\SearchResume.xaml.cs">
+      <DependentUpon>SearchResume.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployerUI\SettingsEmployer.xaml.cs">
+      <DependentUpon>SettingsEmployer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployerUI\Vacancy.xaml.cs">
+      <DependentUpon>Vacancy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EmployerUI\WindowEmployer.xaml.cs">
+      <DependentUpon>WindowEmployer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerUI\AboutWorker.xaml.cs">
+      <DependentUpon>AboutWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerUI\HomeWorker.xaml.cs">
+      <DependentUpon>HomeWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerUI\Resumes.xaml.cs">
+      <DependentUpon>Resumes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerUI\SearchVacancy.xaml.cs">
+      <DependentUpon>SearchVacancy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerUI\SettingsWorker.xaml.cs">
+      <DependentUpon>SettingsWorker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WorkerUI\WindowWorker.xaml.cs">
+      <DependentUpon>WindowWorker.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthorisationEmployerPage.xaml.cs">
+      <DependentUpon>AuthorisationEmployerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AuthorisationWorkerPage.xaml.cs">
+      <DependentUpon>AuthorisationWorkerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChangePage.xaml.cs">
+      <DependentUpon>ChangePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmployerPage.xaml.cs">
+      <DependentUpon>EmployerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegistrationEmployerPage.xaml.cs">
+      <DependentUpon>RegistrationEmployerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegistrationWorkerPage.xaml.cs">
+      <DependentUpon>RegistrationWorkerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WorkerPage.xaml.cs">
+      <DependentUpon>WorkerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Other\DataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthorisationEmployerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AuthorisationWorkerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ChangePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\EmployerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegistrationEmployerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegistrationWorkerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\WorkerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EmployerUI\AboutEmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EmployerUI\HomeEmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EmployerUI\SearchResume.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EmployerUI\SettingsEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EmployerUI\Vacancy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EmployerUI\WindowEmployer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerUI\AboutWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerUI\HomeWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerUI\Resumes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerUI\SearchVacancy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerUI\SettingsWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WorkerUI\WindowWorker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\company.png" />
+    <Resource Include="icons\main.png" />
+    <Resource Include="icons\resume.png" />
+    <Resource Include="icons\settings.png" />
+    <Resource Include="icons\vacancy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\workBack.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="MVVMApp.View.EmployerUI.HomeEmp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMApp.View.EmployerUI"
+             xmlns:vm ="clr-namespace:MVVMApp.ViewModelEmp"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600">
+    <UserControl.DataContext>
+        <vm:HomeEmpVM/>
+    </UserControl.DataContext>
+    <Grid Background="#377068">
+        <Image Source="/icons/workBack.jpg" Margin="0,36,0,0"/>
+        <TextBlock Text="Приложение для поиска резюме и ваканси"
+                   FontFamily="Bold"
+                   FontSize="20" Margin="10,10,0,7"/>
+    </Grid>
+</UserControl>

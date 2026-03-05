@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:MVVMApp.ViewModelEmp"
+                    xmlns:v="clr-namespace:MVVMApp.View.EmployerUI">
+
+    <DataTemplate DataType="{x:Type vm:HomeEmpVM}">
+        <v:HomeEmp/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AboutEmpVM}">
+        <v:AboutEmp/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:SearchResumeVM}">
+        <v:SearchResume/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:SettingsEmpVM}">
+        <v:SettingsEmployer/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:VacancyEmpVM}">
+        <v:Vacancy/>
+    </DataTemplate>
+</ResourceDictionary>

@@ -1,0 +1,110 @@
+﻿<Window x:Class="Zakrep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zakrep"
+        xmlns:vm ="clr-namespace:Zakrep"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="536" Width="800">
+    <Window.DataContext>
+        <vm:ViewModel/>
+    </Window.DataContext>
+    <Grid Background="LightGray" ShowGridLines="True">
+        <Button IsEnabled="{Binding Enable}"
+                Command="{Binding CountCommand}"
+                Content="+"
+                HorizontalAlignment="Left"
+                Margin="46,58,0,0"
+                VerticalAlignment="Top"
+                Height="54" Width="147"/>
+        <TextBlock
+            Text="{Binding Count}"
+            HorizontalAlignment="Left"
+            Margin="228,58,0,0"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" 
+            Height="27" 
+            Width="98"/>
+        <Button Command="{Binding CountCommandDikrement}"
+                Content="-"
+                HorizontalAlignment="Left"
+                Margin="357,55,0,0"
+                VerticalAlignment="Top"
+                Height="57" Width="143"/>
+        <Button Command="{Binding EnableDisableCommand}" 
+                Content="Enable/Disable" 
+                IsEnabled="True"
+                Background="Yellow"
+                BorderBrush="Red"
+                BorderThickness="3"
+                HorizontalAlignment="Left"
+                Margin="46,159,0,0"
+                VerticalAlignment="Top"
+                Height="57" Width="147"/>
+        <Button Command="{Binding resetCommand}"
+                Content="reset"
+                HorizontalAlignment="Left"
+                Margin="357,160,0,0"
+                VerticalAlignment="Top"
+                Height="45" Width="143"/>
+        <Button Command="{Binding validationCommand}"
+                Content="Приветствовать"
+                HorizontalAlignment="Left"
+                Margin="46,276,0,0"
+                VerticalAlignment="Top"
+                Height="48" Width="147"/>
+        <TextBox HorizontalAlignment="Left"
+                 Margin="217,300,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding Text}"
+                 VerticalAlignment="Top" Width="120"/>
+        <Button Command="{Binding plusCommand}" Content="+" HorizontalAlignment="Left" Margin="101,459,0,0" VerticalAlignment="Top" Height="33" Width="37"/>
+        <Button Command="{Binding minusCommand}" Content="-" HorizontalAlignment="Left" Margin="156,459,0,0" VerticalAlignment="Top" Height="33" Width="37"/>
+        <Button Command="{Binding divideCommand}" Content="/" HorizontalAlignment="Left" Margin="217,459,0,0" VerticalAlignment="Top" Height="33" Width="37"/>
+        <Button Command="{Binding multiplyCommand}" Content="*" HorizontalAlignment="Left" Margin="277,459,0,0" VerticalAlignment="Top" Height="33" Width="37"/>
+        <TextBox HorizontalAlignment="Left"
+                 Margin="134,383,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding FirstNum}"
+                 VerticalAlignment="Top"
+                 Width="120"/>
+        <TextBox HorizontalAlignment="Left"
+                 Margin="134,407,0,0"
+                 TextWrapping="Wrap"
+                 Text="{Binding SecondNum}"
+                 VerticalAlignment="Top"
+                 Width="120"/>
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="296,393,0,0"
+                   TextWrapping="Wrap"
+                   Text="{Binding plusCommand}"
+                   VerticalAlignment="Top"
+                   Height="34" Width="116"/>
+        <Button Content="Загрузить"
+                HorizontalAlignment="Left"
+                Margin="432,290,0,0"
+                VerticalAlignment="Top"
+                Height="40" Width="106"/>
+        <ProgressBar HorizontalAlignment="Left"
+                     Height="20"
+                     Margin="375,348,0,0"
+                     VerticalAlignment="Top"
+                     Width="220"/>
+        <StackPanel Margin="531,85,20,229">
+            <ListView Height="155" ItemsSource="{Binding List}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+        </StackPanel>
+        <Button Command="{Binding addCommand}" Content="Добавить" HorizontalAlignment="Left" Margin="531,64,0,0" VerticalAlignment="Top" Height="21" Width="89"/>
+        <Button Command="{Binding deleteCommand}" Content="Удалить" HorizontalAlignment="Left" Margin="620,64,0,0" VerticalAlignment="Top" Width="77"/>
+        <Button Command="{Binding clearCommand}" Content="Очистить все" HorizontalAlignment="Left" Margin="697,64,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="531,40,0,0" TextWrapping="Wrap" Text="{Binding ListText}" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
