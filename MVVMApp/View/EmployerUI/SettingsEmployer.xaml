@@ -4,9 +4,42 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVMApp.View.EmployerUI"
+             xmlns:temp ="clr-namespace:MVVMApp.Other"
+             xmlns:vm ="clr-namespace:MVVMApp.ViewModelEmp"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
-    <Grid>
-            
+    <UserControl.DataContext>
+        <vm:SettingsEmpVM/>
+    </UserControl.DataContext>
+    <Grid Background="#377068">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <TextBlock Text="Смена темы" Height="20" Width="80"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Margin="40,60,0,0"/>
+            <Button Content="Сохранить изменения"
+                    HorizontalAlignment="Left"
+                    Margin="382,10,0,0" VerticalAlignment="Top"/>
+            <ComboBox HorizontalAlignment="Left"
+                      Margin="35,82,0,0"
+                      VerticalAlignment="Top" Width="148">
+                <TextBlock>Темная</TextBlock>
+                <TextBlock>Светлая</TextBlock>
+            </ComboBox>
+            <TextBlock Text="Размер шрифта" Height="20" Width="100"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Top"
+                       Margin="40,160,0,0"/>
+            <ComboBox HorizontalAlignment="Left"
+                      Margin="35,191,0,0"
+                      VerticalAlignment="Top" Width="148">
+                <TextBlock>16</TextBlock>
+                <TextBlock>24</TextBlock>
+                <TextBlock>28</TextBlock>
+            </ComboBox>
+        </Grid>
     </Grid>
 </UserControl>

@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVMApp.View.EmployerUI"
              xmlns:vm ="clr-namespace:MVVMApp.ViewModelEmp"
+             xmlns:temp ="clr-namespace:MVVMApp.Other"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <UserControl.DataContext>
@@ -12,7 +13,7 @@
     </UserControl.DataContext>
     <Grid Background="#377068">
         <Image Source="/icons/workBack.jpg" Margin="0,36,0,0"/>
-        <TextBlock Text="Приложение для поиска резюме и ваканси"
+        <TextBlock Text="Приложение для поиска резюме и вакансий"
                    FontFamily="Bold"
                    FontSize="20" Margin="10,10,0,7"/>
     </Grid>

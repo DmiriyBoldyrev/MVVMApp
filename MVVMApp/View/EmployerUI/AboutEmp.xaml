@@ -5,26 +5,71 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVMApp.View.EmployerUI"
              xmlns:vm ="clr-namespace:MVVMApp.ViewModelEmp"
+             xmlns:temp ="clr-namespace:MVVMApp.Other"
+             xmlns:svgc="clr-namespace:SharpVectors.Converters;assembly=SharpVectors.Converters.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="600">
     <UserControl.DataContext>
         <vm:AboutEmpVM/>
     </UserControl.DataContext>
     <Grid Background="#377068">
-        <TextBlock Text="Название компании" 
-                   HorizontalAlignment="Left" 
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBlock Text="Название компании"           
+                       HorizontalAlignment="Left"            
+                       VerticalAlignment="Top"          
+                       FontSize="24" Margin="135,30,0,0" Height="32" Width="222"/>
+
+            <TextBlock Text="Местонахождение"    
+                       HorizontalAlignment="Left"     
+                       VerticalAlignment="Center"    
+                       FontSize="24" Margin="135,0,0,0" Height="32" Width="204"/>
+            <Border Height="100" Width="100"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="20,4,0,0">
+                <svgc:SvgViewbox Source="\icons\main.svg"         
+                                 Stretch="Uniform"/>
+            </Border>
+            <Button Content="Изменить фото"                    
+                    HorizontalAlignment="Left"                   
+                    Margin="12,106,0,0"                   
+                    VerticalAlignment="Top"                  
+                    Height="30" Width="111"/>
+            <Button Content="изменить"        
+                    HorizontalAlignment="Left"
+                    Margin="362,40,0,0" VerticalAlignment="Top" Height="21" Width="60"/>
+            <Button Content="изменить"        
+                    HorizontalAlignment="Left"           
+                    Margin="362,66,0,0" VerticalAlignment="Top" Height="21" Width="60"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock Text="Описание компании"            
+                   HorizontalAlignment="Left"            
+                   VerticalAlignment="Top"           
+                   FontSize="24" Margin="13,0,0,0" Height="35" Width="227"/>
+
+            <TextBox HorizontalAlignment="Left"                 
+                 Margin="14,36,0,0"
+                 TextWrapping="Wrap" Text=""
+                 VerticalAlignment="Top" Width="342"
+                 Height="262"/>
+
+            <TextBlock HorizontalAlignment="Left"
+                   Margin="14,36,0,0"
+                   TextWrapping="Wrap"
+                   Text=""
                    VerticalAlignment="Top"
-                   FontSize="24" Margin="134,34,0,0"/>
-        <Image HorizontalAlignment="Left"
-               Height="109"
-               Margin="10,10,0,0"
-               VerticalAlignment="Top"
-               Width="120"
-               Source="/icons/company.png"/>
-        <Button Content="Изменить фото" HorizontalAlignment="Left" Margin="134,4,0,0" VerticalAlignment="Top" Height="30" Width="111"/>
-        <TextBlock Text="Название компании" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
-            FontSize="24" Margin="10,126,0,0"/>
+                   Height="262" Width="342"/>
+
+            <Button Content="изменить"              
+                    HorizontalAlignment="Left"                        
+                    Margin="360,40,0,0" VerticalAlignment="Top"               
+                    Height="21" Width="60"/>
+
+        </Grid>
     </Grid>
 </UserControl>
