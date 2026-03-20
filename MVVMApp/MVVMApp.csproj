@@ -84,6 +84,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Model\PageModel.cs" />
+    <Compile Include="Other\AsyncRelayCommand.cs" />
     <Compile Include="Other\Property.cs" />
     <Compile Include="Other\RelayCommand.cs" />
     <Compile Include="ViewModelEmp\AboutEmpVM.cs" />

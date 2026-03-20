@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         xmlns:vm ="clr-namespace:MVVMApp.ViewModelEmp"
         Title="Ваша вакансия" Height="600" Width="800">
+    <Window.DataContext>
+        <vm:NewVacancyFormVM/>
+    </Window.DataContext>
     <Grid Background="#377068">
         <Grid.RowDefinitions>
             <RowDefinition Height="47"/>
@@ -28,7 +31,7 @@
         <Grid Grid.Row="1" Margin="0,0,0,6">
             <TextBox HorizontalAlignment="Left"
                      Margin="35,50,0,0"
-                     TextWrapping="Wrap" Text="Название профессии"
+                     TextWrapping="Wrap" Text="{Binding TextBoxName,UpdateSourceTrigger=PropertyChanged }"
                      VerticalAlignment="Top" Width="235"/>
             <Label Height="35"
                    Width="165"
@@ -45,7 +48,8 @@
             <ComboBox HorizontalAlignment="Left"
                       Margin="35,175,0,0"
                       VerticalAlignment="Top"
-                      Width="235">
+                      Width="235"
+                      SelectedItem ="{Binding ComboBoxChangePay,UpdateSourceTrigger=PropertyChanged}">
                 <TextBlock>Ежедневные</TextBlock>
                 <TextBlock>Каждую неделю</TextBlock>
                 <TextBlock>Каждый месяц</TextBlock>
@@ -54,14 +58,15 @@
             <ComboBox HorizontalAlignment="Left"           
                       Margin="35,0,0,0"
                       VerticalAlignment="Center"            
-                      Width="235">
-                <TextBlock><Run Text="Полная"/></TextBlock>
-                <TextBlock><Run Text="Частичная"/></TextBlock>
-                <TextBlock><Run Text="Гибкий график"/></TextBlock>
+                      Width="235"
+                      SelectedItem="{Binding ComboBoxChangeZanytost ,UpdateSourceTrigger=PropertyChanged}">
+                <TextBlock>Полная</TextBlock>
+                <TextBlock>Частичная</TextBlock>
+                <TextBlock>Гибкий график</TextBlock>
             </ComboBox>
             <TextBox HorizontalAlignment="Left"
                      Margin="35,85,0,0"
-                     TextWrapping="Wrap" Text="Требуемый опыт работы"
+                     TextWrapping="Wrap" Text="{Binding TextBoxExp,UpdateSourceTrigger=PropertyChanged}"
                      VerticalAlignment="Top" Width="235"/>
             <Label Height="30"
                    Width="135"
@@ -72,9 +77,10 @@
             <ComboBox HorizontalAlignment="Left"           
                       Margin="34,318,0,0"
                       VerticalAlignment="Top"            
-                      Width="235">
-                <TextBlock><Run Text="Трудовой договор"/></TextBlock>
-                <TextBlock><Run Text="Самозанятость"/></TextBlock>
+                      Width="235"
+                      SelectedItem="{Binding ComboBoxChangeRegistration ,UpdateSourceTrigger=PropertyChanged}">
+                <TextBlock>Трудовой договор</TextBlock>
+                <TextBlock>Самозанятость</TextBlock>
             </ComboBox>
 
             <Label Height="25"
@@ -87,29 +93,37 @@
             <ComboBox HorizontalAlignment="Left"           
                       Margin="34,409,0,0"
                       VerticalAlignment="Top"            
-                      Width="235">
-                <TextBlock><Run Text="4"/></TextBlock>
-                <TextBlock><Run Text="8"/></TextBlock>
-                <TextBlock><Run Text="12"/></TextBlock>
-                <TextBlock><Run Text="Индивидуально"/></TextBlock>
+                      Width="235"
+                      SelectedItem="{Binding ComboBoxChangeTimeWork ,UpdateSourceTrigger=PropertyChanged}">
+                <TextBlock>4</TextBlock>
+                <TextBlock>8</TextBlock>
+                <TextBlock>12</TextBlock>
+                <TextBlock>Индивидуально</TextBlock>
             </ComboBox>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1">
             <TextBox HorizontalAlignment="Center"
                      Margin="0,44,0,0"
                      TextWrapping="Wrap"
-                     Text="Составьте описание вакансии"
+                     Text="{Binding TextBoxAbout,UpdateSourceTrigger=PropertyChanged}"
                      VerticalAlignment="Top"
                      Width="380" Height="420"/>
+            <TextBlock Text="Напишите что нибудь об этой вакансии"
+                       FontSize="18"
+                       FontFamily="Bold"
+                       Margin="10"/>
 
         </Grid>
         <Button Background="#298752"
                 Content="Создать вакансию"                   
                 Grid.Column="0"                   
-                Grid.Row="2"/>
+                Grid.Row="2"
+                Command="{Binding addVacancyInList}"/>
         <Button Background="#a1252f"           
                 Content="Отмена"                
                 Grid.Column="1"                        
-                Grid.Row="2"/>
+                Grid.Row="2"
+                Command="{Binding stopCreateVacancyCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}"/>
     </Grid>
 </Window>

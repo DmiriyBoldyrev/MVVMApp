@@ -57,7 +57,7 @@
         <TextBox HorizontalAlignment="Left"
                  Margin="217,300,0,0"
                  TextWrapping="Wrap"
-                 Text="{Binding Text}"
+                 Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}"
                  VerticalAlignment="Top" Width="120"/>
         <Button Command="{Binding plusCommand}" Content="+" HorizontalAlignment="Left" Margin="101,459,0,0" VerticalAlignment="Top" Height="33" Width="37"/>
         <Button Command="{Binding minusCommand}" Content="-" HorizontalAlignment="Left" Margin="156,459,0,0" VerticalAlignment="Top" Height="33" Width="37"/>

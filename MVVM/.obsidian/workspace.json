@@ -1,0 +1,208 @@
+{
+  "main": {
+    "id": "684c56a491360b5e",
+    "type": "split",
+    "children": [
+      {
+        "id": "814cb410dee746b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fab28454a385178",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Работодатель/Доработка формы для вакансии.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Доработка формы для вакансии"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "062083756ec8fdf8",
+    "type": "split",
+    "children": [
+      {
+        "id": "d9b24c41d0db5eae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb3e4c6d1c3b70a7",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "8c8beb2add12abfc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "d54298c9e5c466b6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c33e366729ed82bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "27846bbc739e0031",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2856c3c045382f32",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Работодатель/Доработка формы для вакансии.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки для Доработка формы для вакансии"
+            }
+          },
+          {
+            "id": "3f879ef2368668c1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Работодатель/Доработка формы для вакансии.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из Доработка формы для вакансии"
+            }
+          },
+          {
+            "id": "beb644543236d744",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "8e88316571f44e15",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Все свойства"
+            }
+          },
+          {
+            "id": "75bcfc1b93ea0113",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Работодатель/Доработка формы для вакансии.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура Доработка формы для вакансии"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "bases:Создать новую базу": false
+    }
+  },
+  "active": "7fab28454a385178",
+  "lastOpenFiles": [
+    "Работодатель/Доработка формы для вакансии.md",
+    "БД/Создание ER-диаграммы + БД.md",
+    "Работник/Работник.md",
+    "Реализация второй части программы(работник).md",
+    "Работник/Реализация второй части программы(работник).md",
+    "Работник/Доделать окна регистрации и авторизации для работника.md",
+    "Работодатель/Работодатель.md",
+    "Работодатель/Доделать окно 'О работодателе'.md",
+    "Работодатель/Поиск резюме для работодателя.md",
+    "Работодатель/Домашняя страница работодателя.md",
+    "Работодатель/Доделать окно настроек для работодателя.md",
+    "Работодатель/Доделать окна регистрации и авторизации для работодателя.md",
+    "БД/Без названия.canvas",
+    "Стилизация.md",
+    "БД",
+    "Работодатель",
+    "Работник",
+    "Созд",
+    "Добро пожаловать.md"
+  ]
+}

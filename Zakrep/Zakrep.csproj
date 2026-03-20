@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AsyncRCommand.cs" />
     <Compile Include="Property.cs" />
     <Compile Include="RCommand.cs" />
     <Compile Include="ViewModel.cs" />

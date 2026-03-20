@@ -18,5 +18,11 @@ namespace MVVMApp.Model
         public string emailEmp { get; set; }
         public bool status { get; set; }
         public string gender { get; set; }
+
+
+
+        #region Частота выплат
+        
+        #endregion
     }
 }

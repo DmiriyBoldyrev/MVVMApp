@@ -2,6 +2,7 @@
 using MVVMApp.View.EmployerUI;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,17 +31,41 @@ namespace MVVMApp.ViewModelEmp
         public bool clearCommandCanExecute(object p) { return true; }
         #endregion
         #region Кнопка добавить
-        
+
         public RelayCommand addVacancyCommand { get; set; }
-        public void addVacancyCommandExecute(object p) { 
+        public void addVacancyCommandExecute(object p) {
             NewVacancyForm nvc = new NewVacancyForm();
             nvc.ShowDialog(); }
         public bool addVacancyCommandCanExecute(object p) { return true; }
         #endregion
-        public VacancyEmpVM() {
+        public VacancyEmpVM()
+        {
 
             clearCommand = new RelayCommand(clearCommandExecute, clearCommandCanExecute);
             addVacancyCommand = new RelayCommand(addVacancyCommandExecute, addVacancyCommandCanExecute);
         }
-    }
+
+        private ObservableCollection<string> _vacancyList;
+        private string _vacancy;
+
+        public string VacancyList
+        {
+            get => _vacancy;
+            set
+            {
+                if (_vacancy != value)
+                {
+                    _vacancy = value;
+                }
+            }
+        }
+        public ObservableCollection<string> ListVacancy
+        {
+            get { return _vacancyList; }
+            set { _vacancyList = value; OnPropertyChanged(); }
+        }
+
+        
+    
+    } 
 }

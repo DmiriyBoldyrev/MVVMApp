@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 
@@ -22,7 +23,6 @@ namespace Zakrep
             set {
                 _count = value;
                 OnPropertyChanged();
-
             }
         }
 
@@ -87,7 +87,7 @@ namespace Zakrep
             }
         } 
         public RCommand validationCommand { get; }
-        public bool validationCommandCanExecute(object p) { if (Text != null && Text.Length > 2) { return true; } else { return false; } }
+        public bool validationCommandCanExecute(object p) { return Text != null && Text.Length > 2; }
         public void validationCommandExecute(object p) { MessageBox.Show("Hello"); }
         #endregion
 
@@ -172,7 +172,7 @@ namespace Zakrep
             CountCommandDikrement = new RCommand(countExecuteDikrement,canCountExecuteDikrement);
             EnableDisableCommand = new RCommand(enableDisableExecute, enableDisableCanExecute);
             resetCommand = new RCommand(resetCommandExecute,resetCommandCanExecute);
-            validationCommand = new RCommand(validationCommandExecute, validationCommandCanExecute);
+            validationCommand = new RCommand(validationCommandExecute,validationCommandCanExecute);
 
             _list = new ObservableCollection<string>();
             deleteCommand = new RCommand(deleteCommandExecute,deleteCommandCanExecute);
