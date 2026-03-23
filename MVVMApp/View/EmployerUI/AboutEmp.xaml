@@ -18,33 +18,63 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBlock Text="Название компании"           
+            <TextBox   HorizontalAlignment="Left"            
+                       VerticalAlignment="Top"          
+                       FontSize="24" Margin="135,55,0,0"
+                       Height="30" Width="300"
+                       Text="{Binding TextBoxRename}"
+                       Visibility="{Binding TextBoxName}">
+            </TextBox>
+            <TextBox   HorizontalAlignment="Left"     
+                       VerticalAlignment="Center"    
+                       FontSize="24" Margin="135,75,0,0"
+                       Height="30" Width="300"
+                       Text="{Binding TextBoxLocationRename}"
+                       Visibility="{Binding TextBoxLocation}">
+                
+            </TextBox>
+            <TextBlock Text="{Binding TextBlockRename}"           
                        HorizontalAlignment="Left"            
                        VerticalAlignment="Top"          
-                       FontSize="24" Margin="135,30,0,0" Height="32" Width="222"/>
+                       FontSize="24" Margin="135,55,0,0"
+                       Height="30" Width="300"
+                       Visibility="{Binding TextBlockName}"/>
+            <Button Height="20" Width="140"
+                    Margin="450,0,0,90"
+                    Content="Сохранить изменения"></Button>
 
-            <TextBlock Text="Местонахождение"    
+            <TextBlock Text="{Binding TextBlockLocationRename}"    
                        HorizontalAlignment="Left"     
                        VerticalAlignment="Center"    
-                       FontSize="24" Margin="135,0,0,0" Height="32" Width="204"/>
+                       FontSize="24" Margin="135,75,0,0"
+                       Height="30" Width="300"
+                       Visibility="{Binding TextBlockLocation}"/>
             <Border Height="100" Width="100"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
                     Margin="20,4,0,0">
-                <svgc:SvgViewbox Source="\icons\main.svg"         
+                <svgc:SvgViewbox Visibility="{Binding ImageVisibility}"
+                                 Source="{Binding Image}"         
                                  Stretch="Uniform"/>
             </Border>
             <Button Content="Изменить фото"                    
                     HorizontalAlignment="Left"                   
                     Margin="12,106,0,0"                   
                     VerticalAlignment="Top"                  
-                    Height="30" Width="111"/>
+                    Height="30" Width="111"
+                    Command="{Binding changeImageCommand}"/>
             <Button Content="изменить"        
                     HorizontalAlignment="Left"
-                    Margin="362,40,0,0" VerticalAlignment="Top" Height="21" Width="60"/>
+                    Margin="455,60,0,0"
+                    VerticalAlignment="Top"
+                    Height="21" Width="60"
+                    Command="{Binding changeCommand}"/>
             <Button Content="изменить"        
                     HorizontalAlignment="Left"           
-                    Margin="362,66,0,0" VerticalAlignment="Top" Height="21" Width="60"/>
+                    Margin="455,100,0,0"
+                    VerticalAlignment="Top"
+                    Height="21" Width="60"
+                    Command="{Binding changeLocatiobCommand}"/>
         </Grid>
         <Grid Grid.Row="1">
             <TextBlock Text="Описание компании"            

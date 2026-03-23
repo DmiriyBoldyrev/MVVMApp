@@ -31,7 +31,8 @@
         <Grid Grid.Row="1" Margin="0,0,0,6">
             <TextBox HorizontalAlignment="Left"
                      Margin="35,50,0,0"
-                     TextWrapping="Wrap" Text="{Binding TextBoxName,UpdateSourceTrigger=PropertyChanged }"
+                     TextWrapping="Wrap"
+                     Text="{Binding TextBoxName,UpdateSourceTrigger=PropertyChanged }"
                      VerticalAlignment="Top" Width="235"/>
             <Label Height="35"
                    Width="165"
@@ -82,7 +83,6 @@
                 <TextBlock>Трудовой договор</TextBlock>
                 <TextBlock>Самозанятость</TextBlock>
             </ComboBox>
-
             <Label Height="25"
                    Width="100"
                    VerticalAlignment="Top"
